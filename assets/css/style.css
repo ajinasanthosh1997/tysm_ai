@@ -342,6 +342,10 @@ footer a{
   .padd11{
       padding: 0 1rem;
 }
+.img1 {
+    border-radius: 2rem;
+    width: 90%;
+}
 
 
 }
