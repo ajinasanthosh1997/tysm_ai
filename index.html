@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI WhatsApp Assistant Clone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <!-- Add this before </head> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Add this before your closing </head> tag -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    
+
+    <!-- Header -->
+    <header >
+        <div id="transparent-div" class="container-fluid m-0 navbar-container" style="background-color:var(--tyms-neutral-darkest)">
+            <a href="https://www.useadam.io" target="_blank" style="text-decoration:none">
+                <div class="px-2 py-2 text-center bg-black text-white" style="font-size:14px">
+                    <span style="font-size:20px">✨</span>
+                    Introducing ADAM, your AI Agent for accounting and bookkeeping,
+                    <span style="text-decoration:underline">click here to try it free</span>.
+                </div>
+            </a>
+        </div>
+        <nav class="navbar navbar-expand-lg shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="assets/img/logo_ai_w.svg" alt="Logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="color:#752ce7">
+                    <span class="navbar-toggler-icon" style="color:#752ce7"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item me-3">
+                            <a class="nav-link text-white" href="#">Core Accounting</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link text-white" href="#">Tyms AI</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link text-white" href="#">Affiliate</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link text-white" href="#">Embedded Accounting</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Blog</a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex align-items-center gap-3">
+                        <button class="country-flag-btn" data-bs-toggle="modal" data-bs-target="#countryModal">
+                            <img src="assets/img/en.svg" alt="Selected Country" width="30" height="30" class="selected-flag">
+                        </button>
+                        <a href="#" class="btn btn1">Request a demo</a>
+                        <a href="#" class="btn btn1">Start for free</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Country Select Modal -->
+    <div class="modal fade country-modal" id="countryModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content">
+                <div class="modal-header py-3">
+                    <h5 class="modal-title">Select country</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row gy-3">
+                        <!-- Country Items -->
+                        <div class="col-md-4 col-xl-3 country-item">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/en.svg" alt="Flag of Global" class="country-flag">
+                                <span>Global</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xl-3 country-item">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/en-US.svg" alt="Flag of United States" class="country-flag">
+                                <span>United States</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xl-3 country-item">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/en-NG.svg" alt="Flag of Nigeria" class="country-flag">
+                                <span>Nigeria</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xl-3 country-item">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/en-GB.svg" alt="Flag of United Kingdom" class="country-flag">
+                                <span>United Kingdom</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xl-3 country-item">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/en-CA.svg" alt="Flag of Canada" class="country-flag">
+                                <span>Canada</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xl-3 country-item">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/en-KE.svg" alt="Flag of Kenya" class="country-flag">
+                                <span>Kenya</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xl-3 country-item">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/en-GH.svg" alt="Flag of Ghana" class="country-flag">
+                                <span>Ghana</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xl-3 country-item">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/en-MU.svg" alt="Flag of Mauritius" class="country-flag">
+                                <span>Mauritius</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xl-3 country-item">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/en-ID.svg" alt="Flag of Indonesia" class="country-flag">
+                                <span>Indonesia</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xl-3 country-item">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/en-IE.svg" alt="Flag of Ireland" class="country-flag">
+                                <span>Ireland</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xl-3 country-item">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/en-JM.svg" alt="Flag of Jamaica" class="country-flag">
+                                <span>Jamaica</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xl-3 country-item">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/en-MY.svg" alt="Flag of Malaysia" class="country-flag">
+                                <span>Malaysia</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xl-3 country-item">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/en-PH.svg" alt="Flag of Philippines" class="country-flag">
+                                <span>Philippines</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xl-3 country-item">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/en-SG.svg" alt="Flag of Singapore" class="country-flag">
+                                <span>Singapore</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xl-3 country-item">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/en-ZA.svg" alt="Flag of South Africa" class="country-flag">
+                                <span>South Africa</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xl-3 country-item">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/en-AU.svg" alt="Flag of Australia" class="country-flag">
+                                <span>Australia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spotlight Section -->
+    <section class="spotlight-section py-5 sec-margin gradient-section">
+        <div class="container">
+            <div class="card-style">
+                <div class="row mb-0">
+                    <div class="col-lg-6 order-lg-1 text-center text-lg-start mb-5 mb-lg-0 p-3 p-md-5">
+                        <h2 class="text-white mb-4 extra-bold-heading scroll-animation">
+                            <span class="animate-fade-in scroll-animation" style="color: #9757fb;">AI-powered</span> 
+                            <span class="animate-fade-in scroll-animation" style="color: white;">bookkeeping on</span> 
+                            <span class="animate-fade-in scroll-animation" style="color: #9757fb;">WhatsApp</span>
+                        </h2>
+                        <p class="lead text-white-50 mb-4 scroll-animation">
+                            You spend a lot of time and do business communication on WhatsApp, 
+                            that is why you need to be able to securely manage your accounting on WhatsApp.
+                        </p>
+                    </div>
+                    
+                    <div class="col-lg-6 order-lg-2 mb-0 scroll-animation">
+                        <img src="assets/img/whatsapp_ai_mock.png" alt="WhatsApp AI Interface" class="img-fluid spot-img" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section py-5 gradient-section">
+        <div class="container">
+            <div class="mb-5">
+                <div class="row scroll-animation">
+                    <div class="col-lg-8">
+                        <h1 class="text-white mb-4 extra-bold-heading scroll-animation">
+                            <span class="scroll-animation">Bookkeeping </span>
+                            <span class="scroll-animation" style="color: #9757fb;">on-the-go </span> by
+                            sending a text
+                        </h1>
+                        <p class="text-white-50 lead scroll-animation">
+                            Keep record of your daily sales and expenses directly from your WhatsApp, 
+                            don't fill any form, just send a text. That's all! You will need a Tyms 
+                            account to be able to do more.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="sec">
+                <div class="row g-4">
+                    <!-- Feature Cards -->
+                    <div class="col-md-6 scroll-animation">
+                        <div class="h-100 p-3 p-md-5">
+
+                            <i style="font-size:64px;color:var(--tyms-primary-200);" class="ph-duotone ph-receipt gradient-colorx mb-3 scroll-animation"></i>
+                            <h4 class="text-white mb-3 mt-3 scroll-animation">Invoice and Receipt Generation</h4>
+                            <p class="text-white-50 mb-4 scroll-animation">Get an invoice and receipt automatically generated anytime your record a sales via WhatsApp message.</p>
+                            <a href="#" class="btn link1 align-items-center scroll-animation">Get started &nbsp;&nbsp; <span><i style="font-size:14px;color:var(--tyms-primary-200)" class="ph-duotone ph-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-6 scroll-animation">
+                        <div class="h-100 p-3 p-md-5">
+
+                            <i style="font-size:64px;color:var(--tyms-primary-200);" class="ph-duotone ph-shopping-bag gradient-colorx mb-3 scroll-animation"></i>
+                            <h4 class="text-white mb-3 mt-3 scroll-animation">Record Expenses</h4>
+                            <p class="text-white-50 mb-4 scroll-animation">Record your business expenses and inventory restocks by sending a text message with automatic categorization.</p>
+                            <a href="#" class="btn link1 align-items-center scroll-animation">Get started &nbsp;&nbsp;<i style="font-size:14px;color:var(--tyms-primary-200)" class="ph-duotone ph-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-6 scroll-animation">
+                        <div class="h-100 p-3 p-md-5">
+
+                            <i style="font-size:64px;color:#9757fb" class="ph-duotone ph-tree-structure scroll-animation"></i>
+                            <h4 class="text-white mb-3 mt-3 scroll-animation">Generate Chart of Accounts</h4>
+                            <p class="text-white-50 mb-4 scroll-animation">Effectively categorize your transactions. Generate revenue and expenses accounts that align with your business.</p>
+                            <a href="#" class="btn link1 align-items-center scroll-animation">Get started &nbsp;&nbsp;<i style="font-size:14px;color:var(--tyms-primary-200)" class="ph-duotone ph-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-md-6 scroll-animation">
+                        <div class="h-100 p-3 p-md-5">
+
+                             <i style="font-size:64px;color:var(--tyms-primary-200);" class="ph-duotone ph-presentation-chart gradient-colorx scroll-animation"></i>
+                            <h4 class="text-white mb-3 mt-3 scroll-animation">Reporting and Insights</h4>
+                            <p class="text-white-50 mb-4 scroll-animation">View your recent records and transactions, ask AI how well your business is doing and get your financial summary.</p>
+                            <a href="#" class="btn link1 align-items-center scroll-animation">Get started &nbsp;&nbsp;<i style="font-size:14px;color:var(--tyms-primary-200)" class="ph-duotone ph-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Repeat for other cards with scroll-animation class -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Explore Tyms Section -->
+    <section class="p-2 text-white features-section  p-md-5">
+        <div class="container">
+            <div class="row justify-content-center ">
+                <div class="col-md-10">
+                    <div class="card border-0 p-3 p-md-5 rounded-4 sec-card scroll-animation">
+                        <div class="text-center">
+                            <h1 class="mb-3 text-white scroll-animation">Explore Tyms More</h1>
+                            <p class="text-white mb-4 pad scroll-animation">
+                                Discover how Tyms transforms complex accounting into a seamless experience:
+                                Our cutting-edge automation takes the hassle out of financial management,
+                                simplifying repetitive tasks and empowering businesses with effortless precision.
+                            </p>
+                            <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+                                <a href="#" class="btn bt px-4 py-2">Explore Features</a>
+                                <a href="#" class="btn bt2 px-4 py-2">Request a Demo</a>
+                            </div>
+                            <div class="d-flex gap-3 justify-content-center mt-5">
+                                <img src="assets/img/iso-badge.png" alt="Logo 1" height="100" class="rounded-circle border border-white p-2 bg-white">
+                                <img src="assets/img/aicpa-badge.png" alt="Logo 2" height="100" class="rounded-circle border border-white p-2 bg-white">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="text-white pt-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Contact Info -->
+                <div class="col-md-4">
+                    
+                    <p class="text-white-50">
+                        
+                        9450 SW Gemini Dr, PMB 20483 Beaverton,<br>
+                        Oregon, 97008-7105 US.
+                    </p>
+                   
+                    <div class="d-flex gap-3 mb-3">
+                        <a href="#" class="text-white"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+
+                    <div class="d-flex gap-3 mb-3">
+                        <p class="text-white">
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:contact@tyms.io" class="text-white-50 text-decoration-none">&nbsp;contact@tyms.io</a>
+                        </p>
+                        <p class="text-white">
+                            <i class="fa-solid fa-phone-flip"></i>
+                            <a href="tel:+19518788508" class="text-white-50 text-decoration-none">&nbsp;+1 (951) 878-8508</a>
+                        </p>
+                    </div>
+                  
+                  
+                    
+                    <p class="text-white">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/+19518788508" class="text-white-50 text-decoration-none">&nbsp;+19518788508</a>
+                    </p>
+                    <div class="d-flex gap-3 mt-3">
+                        <img src="assets/img/iso-badge.png" alt="Logo 1" height="60" class="rounded-circle border border-white bg-white">
+                        <img src="assets/img/aicpa-badge.png" alt="Logo 2" height="60">
+                    </div>
+
+
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-purple mb-4">Products</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Core accounting software</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">AI accountant & bookkeeper</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Embedded accounting software</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">AI accounting agent (Adam)</a></li>
+                    </ul>
+
+                    <h5 class="text-purple mb-4">Free Tools</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Income statement generator</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Balance sheet generator</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Inventory valuation calculator</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Invoice generator</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Asset schedule generator</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources & Company -->
+                <div class="col-md-3">
+                    <h5 class="text-purple mb-4">Resources</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Help center</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Pricing</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Become an affiliate</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Blog</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Accounting glossary</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Tyms accounting API</a></li>
+                    </ul>
+
+                    <h5 class="text-purple mt-4 mb-3">Company</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none mb-3">About</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none mb-3">Contact us</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none mb-3">Terms of service</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none mb-3">Privacy policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-2">
+                    <h5 class="text-purple mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none mb-3">Request Tyms demo</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none mb-3">Create Tyms account</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none mb-3">Tyms login</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none mb-3">Tyms android app</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none mb-3">Tyms iOS app</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none mb-3">Tyms point of sales</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="mt-5 pt-4">
+                <div class="row">
+                    <div class="text-center text-md-start mb-3 mb-md-0 d-flex justify-content-center">
+                        <small class="text-white-50 mb-5">Copyright © 2025 Tyms Inc.</small>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Animation Script -->
+    <script>
+        // Updated Animation Script
+        function handleScrollAnimations() {
+            const elements = document.querySelectorAll('.scroll-animation');
+            const options = {
+                root: null,
+                rootMargin: '-100px 0px -100px 0px', // Adjusts trigger area
+                threshold: 0.15 // More sensitive trigger
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-up');
+                    } else {
+                        // Reset animation when element leaves view
+                        entry.target.classList.remove('animate-fade-up');
+                    }
+                });
+            }, options);
+
+            elements.forEach(element => {
+                // Reset animation state on each load
+                element.classList.remove('animate-fade-up');
+                observer.observe(element);
+            });
+        }
+
+        // Smooth scroll handler
+        let lastScrollPosition = 0;
+        
+        function handleScrollDirection() {
+            const currentScrollPosition = window.pageYOffset;
+            
+            if (Math.abs(currentScrollPosition - lastScrollPosition) > 50) {
+                handleScrollAnimations();
+                lastScrollPosition = currentScrollPosition;
+            }
+        }
+
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            handleScrollAnimations();
+            window.addEventListener('scroll', handleScrollDirection);
+            window.addEventListener('resize', handleScrollAnimations);
+        });
+
+        // Rest of your country selector script remains the same
+    </script>
+</body>
+</html>
